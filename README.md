@@ -1,8 +1,8 @@
-## pyllama
+# pyllama
 A Python-based terminal interface for Ollama.
 
-# Requirement
+## Requirement
 
-# Quick start guide
+## Quick start guide
 (Coming soon)
 
