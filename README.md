@@ -1,8 +1,10 @@
 # py-ollama
 *"basically Ollama but with extra steps"*
-
 A Python-based terminal interface for Ollama.
-
+> [!NOTE]  
+> This program is in its **EARLY STAGE**, which mean bugs can occur and missing a lot of features.
+> Also, its dev is lazy.
+ 
 ## Requirements
 - Ollama installed
 - Python 3.8 or later
