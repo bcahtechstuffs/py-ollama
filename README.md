@@ -1,4 +1,4 @@
-# pyllama
+# py-ollama
 A Python-based terminal interface for Ollama.
 
 ## Requirement
