@@ -27,6 +27,7 @@ if modelin == '/exit':
 elif modelin:
     rich.print("Selected model:", f"{modelin}")
     rich.print("[blue]Type /exit to exit program.")
+    print("Type your prompt to begin.")
     while True:
         usr = str(input(">> "))
         if usr == "/exit":
