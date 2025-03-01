@@ -33,7 +33,7 @@ A Python-based terminal interface for Ollama.
   ```
   py -m pip install -r requirements.txt
   ```
-  Download your desire model for Ollama by running:
+  Download your desired model for Ollama by running:
   ```
   ollama pull [model]
   ```
