@@ -39,6 +39,7 @@ A Python-based terminal interface for Ollama.
   ```
   with [model] is a name of your chosen model.
   All downloadable models can be found here https://ollama.com/search
+  
   Example:
   ```
   ollama pull llama3.2:1b
