@@ -16,4 +16,4 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-If you have Python 3.7 and older or Python is not installed, you may download Python from here `https://www.python.org/downloads/`
+If you have Python 3.7 and older or Python is not installed, you may download Python from here https://www.python.org/downloads/
