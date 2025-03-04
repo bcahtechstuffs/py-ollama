@@ -8,7 +8,7 @@ A Python-based terminal interface for Ollama.
 > Also, its dev is lazy.
 
 > [!NOTE]
-> As of right now, this program is written for Linux only. Suppport and fixes for Windows and macOS is coming at **v0.3**
+> As of right now, this program is written for Linux only. Although the program CAN run on Windows and macOS, errors may or will occurr. Suppport and fixes for Windows and macOS is coming in **v0.3** update
  
 ## Requirements
 - Ollama installed
