@@ -6,6 +6,9 @@ A Python-based terminal interface for Ollama.
 > This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
 >
 > Also, its dev is lazy.
+
+> [!NOTE]
+> As of right now, this program is written for Linux only. Suppport and fixes for Windows and macOS is coming at **v0.3**
  
 ## Requirements
 - Ollama installed
