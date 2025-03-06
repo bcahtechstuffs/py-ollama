@@ -3,12 +3,10 @@
 
 A Python-based terminal interface for Ollama.
 > [!IMPORTANT]  
-> This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
+> You are in **dev** branch of py-ollama, which means all of releases which is for this branch, has unfinished and/or buggy codes.
 >
-> Also, its dev is lazy.
+> For that, only use codes from this branch for testing purposes.
 
-> [!NOTE]
-> As of right now, this program is written for Linux only. Although the program CAN run on Windows and macOS, errors may or will occurr. Suppport and fixes for Windows and macOS is coming in **v0.3** update
  
 ## Requirements
 - Ollama installed
