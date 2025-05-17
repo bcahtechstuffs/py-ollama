@@ -35,7 +35,7 @@ If not, download Python from [python.org](https://www.python.org/downloads/).
 ### 2 **Setting Up py-ollama**  
 1. **Clone the Repository**  
    ```
-   git clone https://github.com/bcahtechstuffs/py-ollama
+   git clone -b dev https://github.com/bcahtechstuffs/py-ollama
    cd py-ollama
    ```
 
