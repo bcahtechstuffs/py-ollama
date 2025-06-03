@@ -5,7 +5,7 @@ A Python-based terminal interface for Ollama.
 > [!IMPORTANT]  
 > You are in **dev** branch of py-ollama, which means all of releases which is for this branch, has unfinished and/or buggy codes.
 >
-> For that, only use codes from this branch for testing purposes.
+> Although, current dev builds have a LOT of more features than latest stable version v0.2
 
  ## Requirements
 - **Ollama** installed  
