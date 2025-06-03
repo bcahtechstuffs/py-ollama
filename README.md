@@ -8,7 +8,7 @@ A Python-based terminal interface for Ollama.
 > Also, its dev is lazy.
 
 > [!NOTE]
-> Development builds can be found at `dev` branch of this repository.
+> Development builds (whcih are newer and has more features than v0.2) can be found at `dev` branch of this repository.
  
 ## Requirements
 - Ollama installed
