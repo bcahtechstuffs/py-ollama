@@ -5,10 +5,8 @@ A Python-based terminal interface for Ollama.
 > [!IMPORTANT]  
 > This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
 >
-> Also, its dev is lazy.
+> Also, the dev is lazy.
 
-> [!NOTE]
-> Development builds (whcih are newer and has more features than v0.2) can be found at `dev` branch of this repository.
  
 ## Requirements
 - Ollama installed
@@ -30,6 +28,7 @@ A Python-based terminal interface for Ollama.
   >>> 
   ```
   Otherwise, go to https://www.python.org/downloads/ to download Python.
+  Also ensure Ollama is installed on your computer.
   
   ### 2. Running py-ollama
   Download or clone the repo.
@@ -37,22 +36,24 @@ A Python-based terminal interface for Ollama.
   ```
   py -m pip install -r requirements.txt
   ```
-  Download your desired model for Ollama by running:
+  Run `py-ollama` by running:
   ```
-  ollama pull [model]
+  py pyollama.py (if on Windows)
+  python3 pyollama.py (if on macOS/Linux)
   ```
-  with [model] is a name of your chosen model.
+  then run:
+  ```
+  >> /pull [model]
+  ```
+  with `[model]` is name followed by amount of parameters (if have one) of your desired model
   All downloadable models can be found here https://ollama.com/search
   
   Example:
   ```
-  ollama pull llama3.2:1b
+  >> /pull llama3.2:1b
   ```
   The command above is used to pull a version of `llama3.2` model with 1 billion parameters for low-end computers.
-  
-  Run `py-ollama.py` with:
-  ```
-  py pyollama.py
-  ```
-  Follow the program instructions.
+
+  After pulling model, type your previously pulled model name to begin chatting.
+  Follow on-screen instructions.
 </details>
