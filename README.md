@@ -45,7 +45,8 @@ A Python-based terminal interface for Ollama.
   ```
   >> /pull [model]
   ```
-  with `[model]` is name followed by amount of parameters (if have one) of your desired model
+  with `[model]` is name followed by amount of parameters (if have one) of your desired model.
+  
   All downloadable models can be found here https://ollama.com/search
   
   Example:
