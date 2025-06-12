@@ -1,7 +1,7 @@
 # py-ollama
 *"basically Ollama but with extra steps"*
 
-A Python-based terminal interface for Ollama.
+A Python-based terminal interface for Ollama to run LLMs locally (with slightly better output).
 > [!IMPORTANT]  
 > This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
 >
@@ -22,16 +22,21 @@ A Python-based terminal interface for Ollama.
   Check if your Python install is compatible by running `py` or `python3` in terminal.
   If Python is installed, terminal should output like this:
   ```
-  > py
   Python 3.12.7 (main, Feb  4 2025, 14:46:03) [GCC 14.2.0] on linux
   Type "help", "copyright", "credits" or "license" for more information.
   >>> 
   ```
-  Otherwise, go to https://www.python.org/downloads/ to download Python.
+  Otherwise, go to https://www.python.org/downloads/ to download Python interpreter.
+  
   Also ensure Ollama is installed on your computer.
   
   ### 2. Running py-ollama
-  Download or clone the repo.
+  Download or clone this repository. You can clone this repository with Git by running this command:
+  ```
+  git clone https://github.com/bcahtechstuffs/py-ollama
+  ```
+  You can also download the program in `Releases` page of this repository.
+  
   Install required dependencies from text file `requirements.txt`:
   ```
   py -m pip install -r requirements.txt
