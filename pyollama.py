@@ -7,7 +7,7 @@ try:
     from rich.live import Live
     from rich.text import Text
     from rich.markdown import Markdown
-    from textual.app import App, ComposeResult # coming soon
+    # from textual.app import App, ComposeResult # coming soon
     rich.print("[italic]Starting py-ollama...", end="\r")
 except ModuleNotFoundError:
     print("(x) Missing dependencies")
