@@ -5,7 +5,6 @@ A Python-based terminal interface for Ollama to run LLMs locally (with slightly 
 > [!IMPORTANT]  
 > This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
 >
-> Also, the dev is lazy.
 
  
 ## Requirements
