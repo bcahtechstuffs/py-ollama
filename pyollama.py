@@ -18,11 +18,18 @@ except ModuleNotFoundError:
 try:
     import ollama, os, time, subprocess, datetime, sys
 except ModuleNotFoundError as e:
-    rich.print("[bold red](x) Missing dependencies")
-    rich.print(f"[red]{e}")
-    rich.print("[white]Your Python install is missing module(s) which are [white bold]required[/white bold] for py-ollama's functions.")
-    rich.print("[white]You can install them by running `python3 -m pip install -r requirements.txt` within py-ollama folder.")
-    exit()
+    if os.name == "nt":
+        rich.print(Panel.fit(f"""[bold red](x) Missing dependencies[/bold red]
+[red]{e}[/red]
+[white]Your Python install is missing module(s) which are [white bold]required[/white bold] for py-ollama.
+You can install them by running `py -m pip install -r requirements.txt` withnin py-ollama folder.""", border_style="red"))
+        exit()
+    else:
+        rich.print(Panel.fit(f"""[bold red](x) Missing dependencies[/bold red]
+[red]{e}[/red]
+[white]Your Python install is missing module(s) which are [white bold]required[/white bold] for py-ollama.
+You can install them by running `python3 -m pip install -r requirements.txt` withnin py-ollama folder.""", border_style="red"))
+        exit()
 # end of import modules
 
 class pyollama: # one big chunk of code
@@ -106,8 +113,6 @@ class pyollama: # one big chunk of code
         rich.print(f"[blue](i) Refresh rate is now set to [bold white]{speed}")
 
 
-    
-
     def _handle_command(self, user_input): # command handler, duh.
         cmd_parts = user_input.split(" ")
         command = cmd_parts[0]
@@ -123,7 +128,6 @@ class pyollama: # one big chunk of code
             "/change": lambda: self.switch_model(arg) if arg else rich.print("[bold red](!) Missing model name"),
             "/stat": self.display_stats,
             "/about": self.about_prog,
-            # toggle-able settings
             "/rawoutput": self.rawouttoggle,
             "/speed": lambda: self.refreshSet(arg) if arg else rich.print("[bold red](!) Missing integer"),
         }
@@ -137,17 +141,23 @@ class pyollama: # one big chunk of code
             rich.print(Panel.fit(f"""[bold red](!) An error has occurred.[/bold red]
 [white]{e}"""))
             self.exit_prog()
+
+
     def about_prog(self):
-        rich.print(Panel.fit(Markdown('''**py-ollama**\n
-**[Version: 0.3.1 - July 27 '25]**\n
-A Python3-based terminal front-end interface for Ollama\n
-Progammed by: [@bcahtechstuffs](https://github.com/bcahtechstuffs)\n
+        rich.print(Panel.fit('''[bold blue]py-[/bold blue][bold yellow]ollama[/bold yellow]
+                             
+[bold][Version: 0.3.2 - August 4th '25][/bold]
+                             
+A Python3-based terminal front-end interface for Ollama
+Progammed by: @bcahtechstuffs (https://github.com/bcahtechstuffs)
+
 Modules used: ollama, rich, time, datetime, subprocess, os, sys
-All credits goes to each programmers for each Python modules''')))
+All credits goes to each programmers for each Python modules'''))
 
 
     def display_help(self):
-        print('''py-ollama commands (commands followed by underscore requires an additional argument):
+        rich.print(Panel.fit('''[bold green]py-ollama commands (commands followed by underscore requires an additional argument):[/bold green]
+
 /help   : Display list of available commands.
 /exit   : Stop running LLMs then exit program.
 /list   : List all pulled models. ('ollama list')
@@ -156,9 +166,9 @@ All credits goes to each programmers for each Python modules''')))
 /rm _   : Delete a pulled LLM from your drive. ('ollama rm')
 /change _: Switch to another model.
 /stat   : Show statistics for previous response.
-/about  : Show credits. (although only one single dude made this code)
+/about  : Show current version and credits.
 /speed _  : Change output refresh rate.
-        ''')
+/rawoutput : Toggle to use markdown, panels on output.''', border_style="green"))
 
     def generate_chat_response(self, user_input): # TODO: fix jittering output when using rich.live (might as well just use 'textual')
         try:
@@ -187,6 +197,7 @@ All credits goes to each programmers for each Python modules''')))
                         currentthink,
                         border_style="purple"
                     )
+                    blankPanel = Panel("")
                     stream = self.client.chat(model=self.modelin, messages=self.messages, stream=True)
                     lv.update(rpanel)
                     is_thinking = False
@@ -207,6 +218,7 @@ All credits goes to each programmers for each Python modules''')))
                         if not is_thinking:
                             assistant_response_content += content
                         self.word_count += len(content.split())
+                    lv.update(blankPanel)
                 markdownc = Markdown(assistant_response_content)
                 t = datetime.datetime.now()
                 panel = Panel.fit(
@@ -236,7 +248,7 @@ All credits goes to each programmers for each Python modules''')))
 
     def start(self): # what u see when loading this program
         rich.print(Panel.fit("[bold blue]py-[bold yellow]ollama", border_style="blue"))
-        rich.print(Panel.fit("""[bold white][Version : 0.3.1][/bold white]
+        rich.print(Panel.fit("""[bold white][Version : 0.3.2][/bold white]
 
 A Python3-based terminal front-end interface for Ollama.
 Please enter model name below to start (or type [blue]`/help`[/blue] for list of commands):"""))
@@ -248,7 +260,7 @@ Please enter model name below to start (or type [blue]`/help`[/blue] for list of
 [white]Fullscreen TTY may prevent you from scrolling up to read long LLM outputs.
 It is recommended to use tmux (if you mainly use TTY) or any terminal emulators on desktop environment to read long outputs.
                                      
-[bold white]If you see this message while using a desktop enviroment, please send a feedback to pyollama's GitHub repository""", border_style="yellow"))
+[bold white]If you see this message while using a desktop enviroment, please create new issue to pyollama's Github repository""", border_style="yellow"))
         if (len(sys.argv)) > 1:
             model_input =  sys.argv[1]
             rich.print(f"Selected model: [bold white]{model_input}")
