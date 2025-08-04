@@ -4,8 +4,7 @@
 A Python-based terminal interface for Ollama.
 > [!IMPORTANT]  
 > You are in **dev** branch of py-ollama, which means all of releases which is for this branch, has unfinished and/or buggy codes.
->
-> Although, current dev builds have a LOT of more features than latest stable version v0.2
+> Ok but, 0.4 might have gigatons of more feature (still, Textual will be used for 0.5)
 
  ## Requirements
 - **Ollama** installed  
