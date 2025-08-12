@@ -3,7 +3,7 @@
 
 A Python-based terminal interface for Ollama to run LLMs locally (with slightly better output).
 > [!IMPORTANT]  
-> This program is in its **EARLY STAGE** and **INCOMMPLETE**, which mean bugs can occur and missing a lot of features.
+> This program is in its **EARLY STAGE** and **INCOMPLETE**, which mean bugs can occur and missing a lot of features.
 >
 
  
