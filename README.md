@@ -4,7 +4,7 @@
 ![le graphics](https://github.com/bcahtechstuffs/py-ollama/blob/main/decorator/pyollamashowcase.gif)
 
 A Python-based terminal interface for Ollama to run LLMs locally (with slightly better output).
-> [!IMPORTANT]  
+> [!NOTE]  
 > This program is in its **EARLY STAGE** and **INCOMPLETE**, which mean bugs can occur and missing a lot of features.
 >
 
